@@ -245,7 +245,7 @@ end;
 
 function TSecurePageControl.ChildClassAllowed(ChildClass: TClass): boolean;
 begin
-  Result:=(ChildClass<>nil) and (ChildClass.InheritsFrom(PageClass));
+  Result := (ChildClass <> nil) and (ChildClass.InheritsFrom(GetPageClass));
   if Widgetset.GetLCLCapability(lcAllowChildControlsInNativeControls) = LCL_CAPABILITY_YES then Result := True;
 end;
 
